@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { TypeOrmOptionsFactory, TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { EnvService } from '../env/env.service';
+import { EnvironmentService } from '../env/env.service';
 
 @Injectable()
 export class DatabaseService implements TypeOrmOptionsFactory {
-  constructor(private readonly env: EnvService) {}
+  constructor(private readonly env: EnvironmentService) {}
 
   createTypeOrmOptions(): TypeOrmModuleOptions {
     return {

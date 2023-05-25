@@ -1,14 +1,14 @@
 import { join } from 'path';
 import { Module } from '@nestjs/common';
-import { EnvService } from './env.service';
+import { EnvironmentService } from './env.service';
 
 @Module({
   providers: [
     {
-      provide: EnvService,
-      useValue: new EnvService(join(process.cwd(), '.env')),
+      provide: EnvironmentService,
+      useValue: new EnvironmentService(join(process.cwd(), '.env')),
     },
   ],
-  exports: [EnvService],
+  exports: [EnvironmentService],
 })
-export class EnvModule {}
+export class EnvironmentModule {}

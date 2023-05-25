@@ -1,15 +1,15 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { EnvModule } from '../env/env.module';
+import { EnvironmentModule } from '../env/env.module';
 import { DatabaseService } from './database.service';
 
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({
-      imports: [EnvModule],
+      imports: [EnvironmentModule],
       useClass: DatabaseService,
     }),
-    EnvModule,
+    EnvironmentModule,
   ],
   exports: [],
 })
