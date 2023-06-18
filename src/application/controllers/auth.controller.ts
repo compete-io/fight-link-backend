@@ -16,7 +16,7 @@ export class AuthController {
   @Post('/register')
   @ApiResponses('User registration', [
     { status: HttpStatus.CREATED, description: 'User created!' },
-    { status: HttpStatus.CONFLICT, description: 'User exists' },
+    { status: HttpStatus.CONFLICT, description: 'User already exists' },
     { status: HttpStatus.BAD_REQUEST, description: 'Bad request' },
     { status: HttpStatus.UNAUTHORIZED, description: 'Unauthorized' },
   ])

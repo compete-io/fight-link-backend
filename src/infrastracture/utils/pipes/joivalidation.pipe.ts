@@ -1,5 +1,6 @@
-import { PipeTransform, Injectable, BadRequestException } from '@nestjs/common';
+import { BadRequestException, Injectable, PipeTransform } from '@nestjs/common';
 import * as Joi from 'joi';
+import { ErrorDto } from '../../../presenters/dtos/error.dto';
 
 @Injectable()
 export class JoiValidationPipe implements PipeTransform {
@@ -17,10 +18,11 @@ export class JoiValidationPipe implements PipeTransform {
     return validatedValue;
   }
 
-  private buildErrorMessage(error: Joi.ValidationError): string {
-    const errorMessage = error.details
-      .map((detail) => detail.message)
-      .join(', ');
-    return errorMessage;
+  private buildErrorMessage(error: Joi.ValidationError): ErrorDto {
+    const errors = new Map();
+    error.details.forEach((errorDetails) => {
+      errors[errorDetails.context.label] = errorDetails.message;
+    });
+    return new ErrorDto('BadRequest', 404, errors);
   }
 }
