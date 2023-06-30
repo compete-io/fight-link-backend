@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { IUserService } from '../interfaces/user.interface';
 import { UserEntity } from 'src/infrastracture/entities/User/User.entity';
 import { CreateUserDto } from 'src/presenters/dtos/create-user.dto';
-import * as bcrypt from 'bcrypt';
+import * as argon2 from 'argon2';
 import { UserRepository } from '../repositories/user.repository';
 
 @Injectable()
@@ -10,7 +10,7 @@ export class UserService implements IUserService {
   constructor(private userRepository: UserRepository) {}
 
   async create(payload: CreateUserDto): Promise<UserEntity> {
-    const hashedPassword: string = await bcrypt.hash(payload.password, 10);
+    const hashedPassword: string = await argon2.hash(payload.password);
     const newUser = this.userRepository.create({
       ...payload,
       password: hashedPassword,
@@ -38,6 +38,20 @@ export class UserService implements IUserService {
     password: string,
     hashedPassword: string,
   ): Promise<boolean> {
-    return bcrypt.compare(password, hashedPassword);
+    return argon2.verify(hashedPassword, password);
+  }
+
+  async updateRefreshTokenHash(
+    userId: string,
+    refreshToken: string,
+  ): Promise<void> {
+    const hash = await argon2.hash(refreshToken);
+    return this.userRepository.updateRefreshToken(userId, {
+      hashedRefreshToken: hash,
+    });
+  }
+
+  async logout(userId: string): Promise<boolean> {
+    return this.userRepository.logout(userId);
   }
 }

@@ -30,4 +30,23 @@ export class UserRepository {
     if (!user) throw new Error('User not found');
     return user;
   }
+
+  async updateRefreshToken(
+    userId: string,
+    payload: { hashedRefreshToken: string },
+  ): Promise<void> {
+    await this.userRepository.update(userId, payload);
+  }
+
+  async logout(userId: string): Promise<boolean> {
+    await this.userRepository
+      .createQueryBuilder()
+      .update(UserEntity)
+      .set({ hashedRefreshToken: null })
+      .where('id = :id', { id: userId })
+      .andWhere('hashedRefreshToken IS NOT NULL')
+      .execute();
+
+    return true;
+  }
 }
