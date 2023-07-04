@@ -1,17 +1,39 @@
-import { AuthService } from './../services/auth.service';
-import { Body, Controller, Post, UsePipes } from '@nestjs/common';
+import { AuthService } from '../services/auth.service';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpStatus,
+  Post,
+  UseGuards,
+  UsePipes,
+} from '@nestjs/common';
 import { UserEntity } from 'src/infrastracture/entities/User/User.entity';
 import { CreateUserDto } from 'src/presenters/dtos/create-user.dto';
 import { ApiTags } from '@nestjs/swagger';
-import { HttpStatus } from '@nestjs/common';
 import { ApiResponses } from 'src/infrastracture/utils/swagger/swagger.decorators';
 import { JoiValidationPipe } from 'src/infrastracture/utils/pipes/joivalidation.pipe';
 import { createUserSchema } from 'src/infrastracture/schemas/create-user.schema';
+import { UserService } from '../../domain/services/user.service';
+import { SessionEntity } from '../../infrastracture/entities/Session/Session.entity';
+import { ActiveUserData } from '../../infrastracture/utils/types/active-user.type';
+import { ActiveUser } from '../../infrastracture/utils/decorators/active-user.decorator';
+import { Auth } from '../../infrastracture/utils/decorators/authentication.decorator';
+import { AuthType } from '../../infrastracture/utils/enums/auth.type';
+import { AccessTokenGuard } from '../guards/at.guard';
+
+interface Tokens {
+  accessToken: string;
+  refreshToken: string;
+}
 
 @ApiTags('Authentication')
 @Controller('/auth')
 export class AuthController {
-  constructor(private readonly authService: AuthService) {}
+  constructor(
+    private readonly authService: AuthService,
+    private readonly userService: UserService,
+  ) {}
 
   @Post('/register')
   @ApiResponses('User registration', [
@@ -31,7 +53,24 @@ export class AuthController {
     { status: HttpStatus.BAD_REQUEST, description: 'Bad request' },
     { status: HttpStatus.UNAUTHORIZED, description: 'Unauthorized' },
   ])
-  async login(@Body() payload: CreateUserDto): Promise<UserEntity> {
+  async login(@Body() payload: CreateUserDto): Promise<Tokens> {
     return this.authService.login(payload);
+  }
+
+  @Auth(AuthType.Bearer)
+  @UseGuards(AccessTokenGuard)
+  @Post('/logout')
+  async logout(@ActiveUser() user: ActiveUserData) {
+    return this.authService.logout(user);
+  }
+
+  @Get('/users')
+  getUsers(): Promise<UserEntity[]> {
+    return this.userService.findAll();
+  }
+
+  @Get('/sessions')
+  getSessions(): Promise<SessionEntity[]> {
+    return this.authService.getAllSessions();
   }
 }

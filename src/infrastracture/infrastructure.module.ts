@@ -4,5 +4,6 @@ import { DatabaseModule } from './config/database/database.module';
 @Module({
   imports: [DatabaseModule],
   exports: [],
+  providers: [],
 })
 export class InfrastructureModule {}
