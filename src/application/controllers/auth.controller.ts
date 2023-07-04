@@ -5,7 +5,6 @@ import {
   Get,
   HttpStatus,
   Post,
-  Req,
   UseGuards,
   UsePipes,
 } from '@nestjs/common';
@@ -15,9 +14,13 @@ import { ApiTags } from '@nestjs/swagger';
 import { ApiResponses } from 'src/infrastracture/utils/swagger/swagger.decorators';
 import { JoiValidationPipe } from 'src/infrastracture/utils/pipes/joivalidation.pipe';
 import { createUserSchema } from 'src/infrastracture/schemas/create-user.schema';
-import { AuthGuard } from '@nestjs/passport';
 import { UserService } from '../../domain/services/user.service';
-import { Request } from 'express';
+import { SessionEntity } from '../../infrastracture/entities/Session/Session.entity';
+import { ActiveUserData } from '../../infrastracture/utils/types/active-user.type';
+import { ActiveUser } from '../../infrastracture/utils/decorators/active-user.decorator';
+import { Auth } from '../../infrastracture/utils/decorators/authentication.decorator';
+import { AuthType } from '../../infrastracture/utils/enums/auth.type';
+import { AccessTokenGuard } from '../guards/at.guard';
 
 interface Tokens {
   accessToken: string;
@@ -54,15 +57,20 @@ export class AuthController {
     return this.authService.login(payload);
   }
 
-  @UseGuards(AuthGuard('jwt'))
+  @Auth(AuthType.Bearer)
+  @UseGuards(AccessTokenGuard)
   @Post('/logout')
-  async logout(@Req() req: Request) {
-    const user = req.user;
-    return this.authService.logout(user['sub']);
+  async logout(@ActiveUser() user: ActiveUserData) {
+    return this.authService.logout(user);
   }
 
   @Get('/users')
   getUsers(): Promise<UserEntity[]> {
     return this.userService.findAll();
+  }
+
+  @Get('/sessions')
+  getSessions(): Promise<SessionEntity[]> {
+    return this.authService.getAllSessions();
   }
 }

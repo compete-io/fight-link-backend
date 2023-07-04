@@ -4,6 +4,7 @@ import { UserEntity } from 'src/infrastracture/entities/User/User.entity';
 import { CreateUserDto } from 'src/presenters/dtos/create-user.dto';
 import * as argon2 from 'argon2';
 import { UserRepository } from '../repositories/user.repository';
+import { SessionEntity } from '../../infrastracture/entities/Session/Session.entity';
 
 @Injectable()
 export class UserService implements IUserService {
@@ -41,17 +42,7 @@ export class UserService implements IUserService {
     return argon2.verify(hashedPassword, password);
   }
 
-  async updateRefreshTokenHash(
-    userId: string,
-    refreshToken: string,
-  ): Promise<void> {
-    const hash = await argon2.hash(refreshToken);
-    return this.userRepository.updateRefreshToken(userId, {
-      hashedRefreshToken: hash,
-    });
-  }
-
-  async logout(userId: string): Promise<boolean> {
-    return this.userRepository.logout(userId);
+  async updateSession(id: string, session: SessionEntity): Promise<void> {
+    await this.userRepository.updateSession(id, session);
   }
 }

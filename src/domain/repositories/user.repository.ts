@@ -1,8 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { UserEntity } from 'src/infrastracture/entities/User/User.entity';
 import { CreateUserDto } from 'src/presenters/dtos/create-user.dto';
+import { SessionEntity } from '../../infrastracture/entities/Session/Session.entity';
 
 @Injectable()
 export class UserRepository {
@@ -31,22 +32,12 @@ export class UserRepository {
     return user;
   }
 
-  async updateRefreshToken(
-    userId: string,
-    payload: { hashedRefreshToken: string },
-  ): Promise<void> {
-    await this.userRepository.update(userId, payload);
-  }
-
-  async logout(userId: string): Promise<boolean> {
-    await this.userRepository
-      .createQueryBuilder()
-      .update(UserEntity)
-      .set({ hashedRefreshToken: null })
-      .where('id = :id', { id: userId })
-      .andWhere('hashedRefreshToken IS NOT NULL')
-      .execute();
-
-    return true;
+  async updateSession(id: string, session: SessionEntity): Promise<UserEntity> {
+    const existing = await this.findById(id);
+    if (!existing) {
+      throw new NotFoundException('User not found');
+    }
+    existing.sessions = [...existing.sessions, session];
+    return this.userRepository.save(existing);
   }
 }
