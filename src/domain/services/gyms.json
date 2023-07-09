@@ -1,0 +1,541 @@
+[
+  {
+    "id": "e3e46076-f798-46ca-bc59-f1063e9454d8",
+    "status": "PROCESSING",
+    "name": "KO Gym",
+    "logoUrl": "https://scontent-waw1-1.xx.fbcdn.net/v/t31.18172-8/13041426_1076211509102936_4940991408229839258_o.png?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5bx8Z3U8u_gAX_0_qup&_nc_ht=scontent-waw1-1.xx&oh=00_AfDKCEkGSZZo5zlDMpv3YYA_UgkvXrr5nc0ZkIsVYcOq5w&oe=6398E711",
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "locations": [
+      {
+        "name": "KO Gym",
+        "isMain": true,
+        "address": {
+          "street": "",
+          "city": "Wrocław",
+          "coordinates": {
+            "lat": 51.103532155866056,
+            "lng": 17.046027625009362
+          }
+        }
+      }
+    ],
+    "disciplines": [
+      "MUAYTHAI"
+    ],
+    "mainCoach": {
+      "name": "Bartosz Barta",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8d476984-c5a3-404f-95a7-9605306e5269",
+    "status": "PROCESSING",
+    "name": "Puncher",
+    "logoUrl": "https://scontent-waw1-1.xx.fbcdn.net/v/t31.18172-8/13041426_1076211509102936_4940991408229839258_o.png?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5bx8Z3U8u_gAX_0_qup&_nc_ht=scontent-waw1-1.xx&oh=00_AfDKCEkGSZZo5zlDMpv3YYA_UgkvXrr5nc0ZkIsVYcOq5w&oe=6398E711",
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "disciplines": [
+      "MMA",
+      "MUAYTHAI",
+      "BOXING",
+      "KARATE",
+      "JUDO",
+      "KICKBOXING"
+    ],
+    "locations": [
+      {
+        "isMain": true,
+        "name": "Puncher",
+        "address": {
+          "street": "",
+          "city": "Wrocław",
+          "coordinates": {
+            "lat": 51.115387794622436,
+            "lng": 17.05875903154841
+          }
+        }
+      }
+    ],
+    "mainCoach": {
+      "name": "Janusz Janowski",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "311965a2-9a2f-48ce-acd3-c91ca2536ee6",
+    "status": "PROCESSING",
+    "name": "Academia Gorila",
+    "logoUrl": "http://gorila.pl/wp-content/uploads/2013/09/gorila_logo-300x300.png",
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "disciplines": [
+      "MMA",
+      "MUAYTHAI",
+      "BOXING",
+      "KICKBOXING",
+      "BRAZILIAN_JIU_JITSU"
+    ],
+    "locations": [
+      {
+        "isMain": true,
+        "name": "Academia Gorila",
+        "address": {
+          "street": "",
+          "city": "Warszawa",
+          "coordinates": {
+            "lat": 52.238359541756196,
+            "lng": 21.020288769705935
+          }
+        }
+      }
+    ],
+    "mainCoach": {
+      "name": "Grzegorz Sobieszek",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6c26b02d-a386-4441-8271-3814f8f960a1",
+    "status": "PROCESSING",
+    "logoUrl": "https://aligatores.pl/wp-content/uploads/2019/03/Logo_Aligatores@2x.png",
+    "name": "Aligatores Fight Club",
+    "disciplines": [
+      "MMA",
+      "MUAYTHAI",
+      "BOXING",
+      "KICKBOXING",
+      "BRAZILIAN_JIU_JITSU"
+    ],
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "locations": [
+      {
+        "isMain": true,
+        "name": "Aligatores Fight Club",
+        "address": {
+          "street": "",
+          "city": "Warszawa",
+          "coordinates": {
+            "lat": 52.22807611243961,
+            "lng": 21.007436442718024
+          }
+        }
+      }
+    ],
+    "mainCoach": {
+      "name": "Kamil Umiński",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a509441a-81d5-4f5c-b00f-c46eb95b659d",
+    "status": "PROCESSING",
+    "logoUrl": "https://www.spoldzielniakultury.waw.pl/files/photos/organizations/cee2b72c80ee7aa5011fddeec73468aabd79f441.jpg",
+    "name": "Uniq Fight Club",
+    "disciplines": [
+      "MMA",
+      "MUAYTHAI",
+      "BOXING",
+      "KICKBOXING"
+    ],
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "locations": [
+      {
+        "isMain": true,
+        "name": "Uniq Fight Club",
+        "address": {
+          "street": "",
+          "city": "Warszawa",
+          "coordinates": {
+            "lat": 52.21720505740959,
+            "lng": 21.163420396692757
+          }
+        }
+      }
+    ],
+    "mainCoach": {
+      "name": "Kamil Paczuski",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "db5f8d88-6522-47f0-b3ee-073e6abe52e3",
+    "status": "PROCESSING",
+    "logoUrl": "https://studioboksu.pl/wp-content/uploads/2020/05/Main-Logo-Boom.png",
+    "name": "Boom Boxing Studio",
+    "disciplines": [
+      "MMA",
+      "MUAYTHAI",
+      "BOXING",
+      "KICKBOXING"
+    ],
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "locations": [
+      {
+        "isMain": true,
+        "name": "Boom Boxing Studio",
+        "address": {
+          "street": "",
+          "city": "Kraków",
+          "coordinates": {
+            "lat": 50.060295446089754,
+            "lng": 19.9292679696418
+          }
+        }
+      }
+    ],
+    "mainCoach": {
+      "name": "Karol Łopata",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e21d8f52-97ad-4126-8483-190680a50c20",
+    "status": "PROCESSING",
+    "logoUrl": "https://sararateam.pl/wp-content/uploads/2022/10/divi_sarara.png",
+    "name": "Sarara Team",
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "disciplines": [
+      "MMA",
+      "KICKBOXING"
+    ],
+    "locations": [
+      {
+        "isMain": true,
+        "name": "Sarara Team",
+        "address": {
+          "street": "",
+          "city": "Kraków",
+          "coordinates": {
+            "lat": 50.03502033068272,
+            "lng": 19.93337149785159
+          }
+        }
+      }
+    ],
+    "mainCoach": {
+      "name": "Tomasz Sarara",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5432c555-3daa-41fa-a86e-b3f1876c1cfd",
+    "status": "PROCESSING",
+    "logoUrl": "https://studioboksu.pl/wp-content/uploads/2020/05/Main-Logo-Boom.png",
+    "name": "BBB SERCA KRAKOWA & FELIX BOXING GYM",
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "locations": [
+      {
+        "isMain": true,
+        "name": "BBB SERCA KRAKOWA & FELIX BOXING GYM",
+        "address": {
+          "street": "",
+          "city": "Kraków",
+          "coordinates": {
+            "lat": 50.04324710241145,
+            "lng": 19.947039869641248
+          }
+        }
+      }
+    ],
+    "disciplines": [
+      "BOXING"
+    ],
+    "mainCoach": {
+      "name": "",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e6327bf8-3228-4efb-8462-c90413fa354c",
+    "status": "PROCESSING",
+    "logoUrl": "https://scontent-waw1-1.xx.fbcdn.net/v/t1.6435-9/161539078_219955766250079_4547461285339143107_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=nwHopZylOGsAX9LyUTT&_nc_ht=scontent-waw1-1.xx&oh=00_AfDbHfMlFwpgZbE4xjTHasM_YH-XKc6ALofj9xpQ-5m9rQ&oe=6398E54A",
+    "name": "Żarski Klub Sportów Walki",
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "disciplines": [
+      "MUAYTHAI"
+    ],
+    "locations": [
+      {
+        "isMain": true,
+        "name": "",
+        "address": {
+          "street": "",
+          "city": "Żary",
+          "coordinates": {
+            "lat": 51.636768877780156,
+            "lng": 15.142644184658362
+          }
+        }
+      }
+    ],
+    "mainCoach": {
+      "name": "Dawid Polok",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1302d46b-ec7c-4296-b349-bff5fced0e50",
+    "status": "PROCESSING",
+    "name": "Grappling Kraków",
+    "logoUrl": "https://grapplingkrakow.com.pl/wp-content/themes/grappling/library/images/logo-grappling-2.png",
+    "contact": {
+      "email": "",
+      "phoneNumber": "",
+      "socials": {
+        "website": "",
+        "facebook": "",
+        "instagram": "",
+        "tikTok": ""
+      }
+    },
+    "disciplines": [
+      "MMA",
+      "MUAYTHAI",
+      "BOXING",
+      "KICKBOXING",
+      "BRAZILIAN_JIU_JITSU",
+      "WRESTLING"
+    ],
+    "locations": [
+      {
+        "isMain": true,
+        "name": "Grappling Kraków",
+        "address": {
+          "street": "",
+          "city": "Kraków",
+          "coordinates": {
+            "lat": 50.04159197980259,
+            "lng": 19.937620784075804
+          }
+        }
+      },
+      {
+        "isMain": false,
+        "name": "Grappling Kraków",
+        "address": {
+          "street": "",
+          "city": "Kraków",
+          "coordinates": {
+            "lat": 50.08980594673612,
+            "lng": 19.956585044964957
+          }
+        }
+      },
+      {
+        "isMain": false,
+        "name": "Grappling Kraków",
+        "address": {
+          "street": "",
+          "city": "Kraków",
+          "coordinates": {
+            "lat": 50.019733762438584,
+            "lng": 19.97140885291511
+          }
+        }
+      }
+    ],
+    "mainCoach": {
+      "name": "Marcin Dudek",
+      "id": "Bartosz Barta",
+      "disciplines": [
+        "MUAYTHAI"
+      ]
+    },
+    "coaches": [
+      {
+        "id": "Bartosz Barta",
+        "name": "Bartosz Barta",
+        "disciplines": [
+          "MUAYTHAI"
+        ]
+      }
+    ]
+  }
+]

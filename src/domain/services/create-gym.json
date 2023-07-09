@@ -1,0 +1,41 @@
+{
+  "name": "KO Gym",
+  "description": "KO GymKO GymKO GymKO Gym",
+  "foundingDate": "2023-06-11T00:00:00.000Z",
+  "classesAvailability": {
+    "morning": false,
+    "kids": false,
+    "individual": false
+  },
+  "images": {
+    "logo": "https://scontent-waw1-1.xx.fbcdn.net/v/t31.18172-8/13041426_1076211509102936_4940991408229839258_o.png?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5bx8Z3U8u_gAX_0_qup&_nc_ht=scontent-waw1-1.xx&oh=00_AfDKCEkGSZZo5zlDMpv3YYA_UgkvXrr5nc0ZkIsVYcOq5w&oe=6398E711",
+    "background": "https://scontent-waw1-1.xx.fbcdn.net/v/t31.18172-8/13041426_1076211509102936_4940991408229839258_o.png?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5bx8Z3U8u_gAX_0_qup&_nc_ht=scontent-waw1-1.xx&oh=00_AfDKCEkGSZZo5zlDMpv3YYA_UgkvXrr5nc0ZkIsVYcOq5w&oe=6398E711"
+  },
+  "contact": {
+    "email": "",
+    "phoneNumber": "",
+    "socials": {
+      "website": "",
+      "facebook": "",
+      "instagram": "",
+      "tikTok": ""
+    }
+  },
+  "locations": [
+    {
+      "isMain": true,
+      "address": {
+        "street": "dfgdfg",
+        "city": "Wrocław",
+        "postalCode": "71-221",
+        "coordinates": {
+          "lat": 51.103532155866056,
+          "lng": 17.046027625009362
+        }
+      }
+    }
+  ],
+  "disciplines": [
+    "MUAYTHAI"
+  ]
+}
